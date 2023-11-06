@@ -21,3 +21,6 @@ search_field.send_keys(Keys.ENTER)
 time.sleep(1)
 
 driver.get_screenshot_as_file('zrzut_ekranu.png')
+
+#time.sleep(1)
+driver.quit()
