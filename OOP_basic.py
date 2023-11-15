@@ -1,11 +1,12 @@
 class Auto:
-    def __init__(self, barwa, stan, wiek):
-        self.kolor = barwa
+    def __init__(self, kolor, kondycja, wiek, przebieg):
+        self.kolor = kolor
         self.ilosc_paliwa = 10
-        self.kondycja = stan
+        self.kondycja = kondycja
         self.tryb_ekonomiczny = False
         self.spalanie_na_100 = 14
         self.rocznik = 2023 - wiek
+        self.przebieg = przebieg
 
     def tryb_eco(self):
         self.tryb_ekonomiczny = True
@@ -32,8 +33,14 @@ class Auto:
             self.tryb_eco()
             print(f'Nie rozpoznano wyboru, zostawiam tryb ekonomiczny')
 
+    def zmien_przebieg(self, ile):
+        if ile > 0:
+            self.przebieg += ile
 
-auto_Lukasza = Auto('zielone', 4, 12)
+    def __str__(self):
+        return (f'Auto o przebiegu: {self.przebieg}, rocznik: {self.rocznik}')
+
+auto_Lukasza = Auto('zielone', 4, 12, 90453)
 print(auto_Lukasza.kolor)
 auto_Lukasza.kolor = 'niebieskie'
 print(auto_Lukasza.kolor)
@@ -44,3 +51,5 @@ print(f'Spalanie na 100 km po zmianie na tryb ECO: {auto_Lukasza.spalanie_na_100
 print(f'Przejedziesz jeszcze {auto_Lukasza.zasieg()} km')
 auto_Lukasza.zmien_tryb('eco')
 auto_Lukasza.zmien_tryb('ECO')
+
+print(auto_Lukasza)
