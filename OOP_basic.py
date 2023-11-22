@@ -46,10 +46,10 @@ auto_Lukasza.kolor = 'niebieskie'
 print(auto_Lukasza.kolor)
 print(f'Spalanie na 100 km w trybie NORMAL: {auto_Lukasza.spalanie_na_100} l')
 auto_Lukasza.tryb_eco()
-auto_Lukasza.tryb_normal()
+# auto_Lukasza.tryb_normal()
 print(f'Spalanie na 100 km po zmianie na tryb ECO: {auto_Lukasza.spalanie_na_100} l')
 print(f'Przejedziesz jeszcze {auto_Lukasza.zasieg()} km')
-auto_Lukasza.zmien_tryb('eco')
-auto_Lukasza.zmien_tryb('ECO')
+# auto_Lukasza.zmien_tryb('eco')
+# auto_Lukasza.zmien_tryb('ECO')
 
 print(auto_Lukasza)
