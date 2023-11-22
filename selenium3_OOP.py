@@ -11,7 +11,7 @@ class LoginPage:
         self.login_button_name = 'login-button'
 
     def open(self):
-        self.driver.get('https://www.saucedemo.com/')
+        self.driver.get('https://www.saucedemo.com')
         self.driver.maximize_window()
 
     def enter_username(self, username):
